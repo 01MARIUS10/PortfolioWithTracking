@@ -4,9 +4,14 @@
   publish = ".output/public"
 
 [build.environment]
-  NODE_VERSION = "22"
-  NUXT_PUBLIC_ENV = "production"
-  NITRO_OUTPUT_DIR  = "/opt/build/repo/.output"
+  NODE_VERSION     = "20"
+  NUXT_PUBLIC_ENV  = "production"
+  NITRO_OUTPUT_DIR = "/opt/build/repo/.output"
+
+[[redirects]]
+  from   = "/*"
+  to     = "/.netlify/functions/server"
+  status = 200
 
 [[headers]]
   for = "/*"
