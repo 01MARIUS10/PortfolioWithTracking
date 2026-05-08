@@ -1,6 +1,6 @@
 <template>
   <!-- Single experience item in the timeline -->
-  <div class="relative pl-8 pb-12 last:pb-0">
+  <div class="relative pl-8 pb-12 last:pb-0 mb-8">
     <!-- Timeline dot -->
     <div class="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-indigo-500 ring-4 ring-surface"></div>
     <!-- Header -->

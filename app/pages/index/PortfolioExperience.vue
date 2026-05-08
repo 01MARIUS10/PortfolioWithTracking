@@ -32,8 +32,16 @@ const { el, visible } = useReveal()
 const itemRefs = ref<HTMLElement[]>([])
 const distances = ref<number[]>(experiences.map(() => 999))
 
+// Désactivé sur mobile (< 768px) — le blur dégrade l'expérience tactile
+const isMobile = ref(false)
+
+function checkMobile() {
+  isMobile.value = window.innerWidth < 768
+}
+
 function updateFocus() {
   if (import.meta.server) return
+  if (isMobile.value) return
   const center = window.innerHeight / 2
   distances.value = itemRefs.value.map((itemEl) => {
     if (!itemEl) return 999
@@ -43,15 +51,12 @@ function updateFocus() {
 }
 
 const itemStyles = computed(() => {
-  // SSR : pas de window — renvoie tous les items visibles sans effet
-  if (import.meta.server) {
-    return experiences.map(() => ({}))
-  }
+  if (import.meta.server) return experiences.map(() => ({}))
+  // Pas d'effet sur mobile
+  if (isMobile.value) return experiences.map(() => ({}))
   const viewH = window.innerHeight || 800
-  // The closest item always wins — others are measured relative to it
   const minD = Math.min(...distances.value)
   return distances.value.map((d) => {
-    // relD = 0 for the winner, always positive for all others
     const relD = d - minD
     const t = Math.min(1, relD / (viewH * 0.28))
     const blur    = +(t * 7).toFixed(2)
@@ -68,12 +73,15 @@ const itemStyles = computed(() => {
 })
 
 onMounted(() => {
+  checkMobile()
   window.addEventListener('scroll', updateFocus, { passive: true })
+  window.addEventListener('resize', checkMobile, { passive: true })
   updateFocus()
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', updateFocus)
+  window.removeEventListener('resize', checkMobile)
 })
 </script>
 

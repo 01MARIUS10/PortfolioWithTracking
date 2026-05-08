@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-surface text-slate-200 leading-relaxed">
+  <div class="bg-surface text-slate-200 leading-relaxed w-full overflow-x-hidden">
     <PortfolioNavbar />
     <PortfolioHero />
     <PortfolioAbout />

@@ -1,6 +1,6 @@
 <template>
   <footer class="text-center py-8 text-xs text-slate-500 border-t border-card-border">
-    <p>© {{ year }} Marius — Fullstack Confirmé · Madagascar · Mayotte · Canada</p>
+    <p>© {{ year }} Marius — Fullstack Confirmé · Madagascar </p>
   </footer>
 </template>
 

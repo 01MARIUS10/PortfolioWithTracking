@@ -3,6 +3,12 @@
    Inspiré de joshwcomeau.com · brittanychiang.com · paco.me
    ================================================================ */
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
 /* ── Spotlight cursor ────────────────────────────────────────────
    Tache lumineuse radiale qui suit la souris (desktop uniquement).
    --sx / --sy sont mis à jour par useSpotlight.ts.               */
