@@ -33,6 +33,7 @@ const itemRefs = ref<HTMLElement[]>([])
 const distances = ref<number[]>(experiences.map(() => 999))
 
 function updateFocus() {
+  if (import.meta.server) return
   const center = window.innerHeight / 2
   distances.value = itemRefs.value.map((itemEl) => {
     if (!itemEl) return 999
@@ -42,6 +43,10 @@ function updateFocus() {
 }
 
 const itemStyles = computed(() => {
+  // SSR : pas de window — renvoie tous les items visibles sans effet
+  if (import.meta.server) {
+    return experiences.map(() => ({}))
+  }
   const viewH = window.innerHeight || 800
   // The closest item always wins — others are measured relative to it
   const minD = Math.min(...distances.value)
