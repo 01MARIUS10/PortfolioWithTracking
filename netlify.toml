@@ -12,7 +12,7 @@
   publish = ".output/public"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   # Variables d'environnement non-secrètes (les secrètes vont dans Netlify UI)
   NUXT_PUBLIC_ENV = "production"
 
