@@ -18,6 +18,11 @@ export default defineEventHandler(async (event) => {
     return
   }
 
+  // If Supabase env vars are not set (e.g. local dev without .env), skip silently
+  if (!process.env.SUPABASE_URL || !process.env.NUXT_SUPABASE_SECRET_KEY) {
+    return
+  }
+
   try {
     const supabase = getSupabaseService(event)
     const headers = getRequestHeaders(event)
