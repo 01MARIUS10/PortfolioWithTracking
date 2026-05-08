@@ -37,7 +37,7 @@ export interface AboutData {
 export const about: AboutData = {
   paragraphs: [
     {
-      html: 'Développeur Fullstack spécialisé dans l\'écosystème <span class="text-slate-200">PHP (Laravel)</span> et <span class="text-slate-200">JavaScript (Vue.js, React)</span>. Expert dans la conception d\'architectures scalables — SOA, Hexagonale — et l\'automatisation des déploiements CI/CD.',
+      html: 'Développeur Fullstack spécialisé dans l\'écosystème <span class="text-slate-200">PHP (Laravel)</span> et <span class="text-slate-200">JavaScript (Vue.js, React)</span>. Confirmé dans la conception d\'architectures scalables — SOA, Hexagonale — et l\'automatisation des déploiements CI/CD.',
     },
     {
       html: 'Mon parcours international — <span class="text-slate-200">Madagascar</span>, <span class="text-slate-200">Mayotte</span>, <span class="text-slate-200">Canada</span> — m\'a permis de développer une forte adaptabilité. Je maîtrise Scrum/Kanban et suis à l\'aise en autonomie comme en équipe distribuée.',
@@ -83,9 +83,9 @@ export const hero: HeroData = {
   greeting: 'Bonjour, je suis',
   name: 'Marius',
   typewriterPhrases: [
-    'Développeur Fullstack Senior',
+    'Développeur Fullstack Confirmé',
     'Architecte Logiciel',
-    'Expert Laravel · Vue.js',
+    'Laravel · Vue.js · DevOps',
     'Passionné de DevOps',
   ],
   stack: 'Laravel · Vue.js · Architecture logicielle · DevOps',
@@ -157,16 +157,32 @@ export const projects: Project[] = [
     title: 'Portfolio Analytics',
     desc: 'Dashboard d\'analytics en temps réel. Architecture port-adapter, auth Supabase 100% backend, SSR Nuxt 4.',
     tags: ['Nuxt 4', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
-    github: 'https://github.com/votre-username/portfolio',
+    github: 'https://github.com/01MARIUS10/PortfolioWithTracking',
     demo: null,
   },
   {
     icon: '🚚',
     title: 'JejeLivraison Platform',
-    desc: 'Plateforme de livraison avec GPS/Géofencing, paiement PayPal et impression thermique automatisée.',
-    tags: ['Laravel', 'ReactJS', 'PayPal API', 'GPS', 'REST API', 'MySQL'],
+    desc: 'Plateforme E-Commerce avec GPS/Géofencing, paiement PayPal et impression thermique automatisée.',
+    tags: ['Laravel', 'ReactJS', 'PayPal API','Paygreen API', 'Stripe', 'GPS', 'REST API', 'MySQL'],
     github: null,
+    demo: "https://jejelivraison.com",
+  },
+  {
+    icon: '⚖️',
+    title: 'Bank Transaction Microservices',
+    desc: 'Microservices pour la gestion des transactions bancaires : sécurité, scalabilité et fiabilité.',
+    tags: ['Laravel', 'Clean Architecture', 'Docker', 'PostgreSQL'],
+    github: 'https://github.com/01MARIUS10/BankMicroservice',
     demo: null,
+  },
+  {
+    icon: '⚖️',
+    title: 'MIPS',
+    desc: 'Suite pour huissiers : signature électronique, validation de documents légaux, archivage sécurisé.',
+    tags: ['Laravel','Vue.js', 'Features Based Architecture', 'API REST', 'PostgreSQL'],
+    github: null,
+    demo: "https://mips.mg",
   },
   {
     icon: '⚖️',
@@ -174,22 +190,23 @@ export const projects: Project[] = [
     desc: 'Suite pour huissiers : signature électronique, validation de documents légaux, archivage sécurisé.',
     tags: ['Laravel', 'Modular Architecture', 'API REST', 'PostgreSQL'],
     github: null,
-    demo: null,
+    demo: "https://kianja.mips.mg/api/documentation",
+  },
+
+  {
+    icon: '⚖️',
+    title: 'Paika - ONG',
+    desc: 'Plateforme numerique qui permet a chaque citoyen de pouvoir contribuer sur un projet Ong',
+    tags: ['Nuxt 4', 'Vue.js', 'Pinia', 'API REST', 'Supabase','PostgreSQL'],
+    github: null,
+    demo: 'https://paika-ong.netlify.app/',
   },
   {
     icon: '⚖️',
     title: 'E-poketra',
     desc: 'Suite pour huissiers : signature électronique, validation de documents légaux, archivage sécurisé.',
-    tags: ['Laravel', 'Vue.js', 'API REST', 'PostgreSQL'],
-    github: null,
-    demo: null,
-  },
-  {
-    icon: '⚖️',
-    title: 'Bank Transaction Microservices',
-    desc: 'Microservices pour la gestion des transactions bancaires : sécurité, scalabilité et fiabilité.',
-    tags: ['Laravel', 'Clean Architecture', 'Docker', 'PostgreSQL'],
-    github: null,
+    tags: ['Laravel', 'Vue.js', 'Supabase', 'PostgreSQL'],
+    github: "https://github.com/01MARIUS10/WalletManagement",
     demo: null,
   },
   {
@@ -197,7 +214,7 @@ export const projects: Project[] = [
     title: 'Forum ',
     desc: 'Microservices pour la gestion des transactions bancaires : sécurité, scalabilité et fiabilité.',
     tags: ['Laravel', 'API REST', 'MySQL'],
-    github: null,
+    github: 'https://github.com/01MARIUS10/projet_forum_apiLaravel',
     demo: null,
   },
 ]
@@ -206,6 +223,6 @@ export const skills: SkillCategory[] = [
   { label: 'Backend',        items: ['Laravel', 'PHP', 'Node.js', 'Nitro', 'REST API', 'PostgreSQL', 'MySQL'] },
   { label: 'Frontend',       items: ['Vue.js 3', 'React', 'Nuxt 4', 'TypeScript', 'Tailwind CSS'] },
   { label: 'Architecture',   items: ['SOA', 'Architecture Hexagonale', 'SOLID', 'Design Patterns', 'Port-Adapter'] },
-  { label: 'DevOps & Cloud', items: ['CI/CD', 'GitHub Actions', 'Linux / Nginx', 'Docker', 'Supabase', 'Vercel'] },
+  { label: 'DevOps & Cloud', items: ['CI/CD', 'GitHub Actions', 'Linux / Nginx', 'Docker','Cloudflare', 'Supabase', 'Vercel'] },
   { label: 'Méthodes & Tests', items: ['Scrum / Kanban', 'PHPUnit', 'Pest', 'Vitest', 'Cypress'] },
 ]
