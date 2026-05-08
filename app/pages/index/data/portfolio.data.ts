@@ -63,20 +63,32 @@ export interface HeroData {
 
 export interface ContactData {
   tagline: string
+  phone: string
+  whatsapp: string
+  location: string
   email: string
   emailLabel: string
   links: { label: string; href: string }[]
+  freelance: { nif: string; stat: string }
 }
 
 export const contact: ContactData = {
   tagline: 'Un projet, une opportunité ou envie d\'échanger sur une architecture technique ?',
+  phone: '+261 32 80 77 805',
+  whatsapp: '+261 34 99 486 84',
+  location: 'Antananarivo, Madagascar',
   email: 'mailto:votre@email.com',
   emailLabel: 'Envoyer un email',
   links: [
+    { label: 'Portfolio ↗', href: 'https://01marius10-portfolio.netlify.app' },
     { label: 'GitHub ↗',   href: 'https://github.com/01MARIUS10' },
     { label: 'GitLab ↗',   href: 'https://gitlab.com/01MARIUS10' },
     { label: 'LinkedIn ↗', href: 'https://www.linkedin.com/in/razafitsalama-marius-08517b227/' },
   ],
+  freelance: {
+    nif:  '5018377557',
+    stat: '70209 11 2023 0 08425',
+  },
 }
 
 export const hero: HeroData = {
@@ -177,7 +189,7 @@ export const projects: Project[] = [
     demo: null,
   },
   {
-    icon: '⚖️',
+    icon: '📢',
     title: 'MIPS',
     desc: "Plateforme de publicité . Centraliser et structurer des annonces pour aider les utilisateurs à trouver des services locaux, des offres d'emploi, des événements et des opportunités commerciales à Madagascar.",
     tags: ['Laravel','Vue.js', 'Features Based Architecture', 'API REST', 'PostgreSQL'],
@@ -185,7 +197,7 @@ export const projects: Project[] = [
     demo: "https://mips.mg",
   },
   {
-    icon: '📋',
+    icon: '⚖️',
     title: 'Kianja',
     desc: 'API REST documentée pour la gestion de dossiers légaux : archivage, validation et traçabilité des actes.',
     tags: ['Laravel', 'Modular Architecture', 'API REST', 'PostgreSQL'],
