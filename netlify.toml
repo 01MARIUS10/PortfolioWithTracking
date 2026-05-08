@@ -1,35 +1,11 @@
-# ================================================================
-# Netlify — Configuration de déploiement
-# Nuxt 4 (SSR) sur Netlify via @netlify/nuxt
-# ================================================================
-
 [build]
-  # Répertoire contenant le package.json
-  base    = "."
-  # Commande de build SSR
   command = "npm run build"
-  # Répertoire publié (output Nuxt SSR pour Netlify)
   publish = ".output/public"
 
 [build.environment]
   NODE_VERSION = "20"
-  # Variables d'environnement non-secrètes (les secrètes vont dans Netlify UI)
   NUXT_PUBLIC_ENV = "production"
 
-# ── Fonctions Netlify (server routes Nuxt → Lambda) ──────────────
-[functions]
-  # Répertoire des server functions générées par Nuxt
-  directory         = ".output/server"
-  node_bundler      = "zisi"
-  included_files    = [".output/server/**"]
-
-# ── Redirects — toutes les requêtes passent par le SSR handler ───
-[[redirects]]
-  from   = "/*"
-  to     = "/.netlify/functions/server"
-  status = 200
-
-# ── Headers de sécurité (production) ─────────────────────────────
 [[headers]]
   for = "/*"
   [headers.values]
@@ -38,7 +14,6 @@
     Referrer-Policy        = "strict-origin-when-cross-origin"
     Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
 
-# Assets statiques — cache long terme
 [[headers]]
   for = "/_nuxt/*"
   [headers.values]
