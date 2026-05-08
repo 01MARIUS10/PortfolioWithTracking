@@ -5,11 +5,6 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss','@netlify/nuxt'],
   css: ['~/assets/css/main.css'],
 
-  // Netlify SSR preset — génère .output/server comme Netlify Function
-  nitro: {
-    preset: process.env.NETLIFY ? 'netlify' : undefined,
-  },
-
   app: {
     head: {
       style: [{ type: 'text/css', children: 'html { scroll-behavior: smooth; }' }],
