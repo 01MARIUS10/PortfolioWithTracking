@@ -114,10 +114,24 @@ export const hero: HeroData = {
 
 export const experiences: Experience[] = [
   {
+    role: 'Mid-Senior Developer',
+    company: 'Nuklear',
+    location: 'Antananarivo, Madagascar',
+    period: '06/2026 – Présent',
+    highlights: [
+      'Projet Software as a Service (SaaS) pour vente de formation en ligne exclusive multilangue .',
+      'Optimisation de la performance de l\'application ',
+      'Performance de la base de données et optimisation des requêtes SQL pour réduire le temps de réponse.',
+      'Optimisation des cas d\'usage de la RAM et du CPU pour minimiser les overlocking de la base de données',
+      'Solution d\'innovation de l\'existant avec indice KPI temps d\'execution AVG et P95',
+    ],
+    tags: ['Laravel', 'Vue.js 3', 'Docker', 'SaaS', 'Nginx', 'Linux', 'Mysql'],
+  },
+  {
     role: 'FullStack Developer',
     company: 'Mahafaka',
     location: 'Antananarivo, Madagascar',
-    period: '02/2023 – Présent',
+    period: '02/2023 – 05/2026',
     highlights: [
       'Conception d\'architectures orientées services (SOA) pour des applications mobiles et web scalables.',
       'Administration complète de serveurs Linux — sécurité, optimisation Nginx/Apache.',
