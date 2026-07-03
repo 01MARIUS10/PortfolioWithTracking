@@ -37,7 +37,7 @@ export interface AboutData {
 export const about: AboutData = {
   paragraphs: [
     {
-      html: 'Développeur Fullstack spécialisé dans l\'écosystème <span class="text-slate-200">PHP (Laravel)</span> et <span class="text-slate-200">JavaScript (Vue.js, React)</span>. Confirmé dans la conception d\'architectures scalables — SOA, Hexagonale — et l\'automatisation des déploiements CI/CD.',
+      html: 'Développeur Fullstack spécialisé dans l\'écosystème <span class="text-slate-200">PHP (Laravel)</span> et <span class="text-slate-200">JavaScript (Vue.js, React)</span>. Confirmé dans la conception d\'architectures scalables — Clean , Modulaire, Hexagonale — et l\'automatisation des déploiements CI/CD.',
     },
     {
       html: 'Mon parcours international — <span class="text-slate-200">Madagascar</span>, <span class="text-slate-200">Mayotte</span>, <span class="text-slate-200">Canada</span> — m\'a permis de développer une forte adaptabilité. Je maîtrise Scrum/Kanban et suis à l\'aise en autonomie comme en équipe distribuée.',
@@ -86,8 +86,8 @@ export const contact: ContactData = {
     { label: 'LinkedIn ↗', href: 'https://www.linkedin.com/in/razafitsalama-marius-08517b227/' },
   ],
   freelance: {
-    nif:  '5018377557',
-    stat: '70209 11 2023 0 08425',
+    nif:  '501837****',
+    stat: '70209 11 2023 0 0****',
   },
 }
 
@@ -101,7 +101,7 @@ export const hero: HeroData = {
     'Passionné de DevOps',
   ],
   stack: 'Laravel · Vue.js · Architecture logicielle · DevOps',
-  bio: 'Plus de 3 ans d\'expérience dans la conception d\'architectures scalables (SOA, Hexagonale) et l\'automatisation des déploiements. Parcours international : Madagascar · Mayotte · Canada.',
+  bio: 'Plus de 3 ans d\'expérience dans la conception d\'architectures scalables (Clean, Modulaire, Hexagonale) et l\'automatisation des déploiements. Parcours international : Madagascar · Mayotte · Canada.',
   cta: [
     { label: 'Voir mes projets', href: '#projects', primary: true },
     { label: 'Me contacter',    href: '#contact',  primary: false },
