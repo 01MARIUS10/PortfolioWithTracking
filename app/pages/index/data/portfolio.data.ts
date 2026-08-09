@@ -70,7 +70,7 @@ export interface ContactData {
 
 export const contact: ContactData = {
   tagline: 'Un projet, une opportunité ou envie d\'échanger sur une architecture technique ?',
-  email: 'mailto:votre@email.com',
+  email: 'mailto:mariustsiorimbola@email.com',
   emailLabel: 'Envoyer un email',
   links: [
     { label: 'GitHub ↗',   href: 'https://github.com/01MARIUS10' },
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     title: 'Portfolio Analytics',
     desc: 'Dashboard d\'analytics en temps réel. Architecture port-adapter, auth Supabase 100% backend, SSR Nuxt 4.',
     tags: ['Nuxt 4', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
-    github: 'https://github.com/votre-username/portfolio',
+    github: 'https://github.com/01MARIUS10/PortfolioWithTracking',
     demo: null,
   },
   {
