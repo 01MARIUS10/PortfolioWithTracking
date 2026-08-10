@@ -77,7 +77,7 @@ export const contact: ContactData = {
   phone: '+261 32 80 77 805',
   whatsapp: '+261 34 99 486 84',
   location: 'Antananarivo, Madagascar',
-  email: 'mailto:mariustsiorimbola@email.com',
+  email: 'mailto:mariustsiorimbola@gmail.com',
   emailLabel: 'Envoyer un email',
   links: [
     { label: 'Portfolio ↗', href: 'https://01marius10-portfolio.netlify.app' },
